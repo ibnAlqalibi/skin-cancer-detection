@@ -127,6 +127,10 @@ class MainActivity : AppCompatActivity() {
                 val intent = Intent(this@MainActivity, HistoryActivity::class.java)
                 startActivity(intent)
             }
+            btnNews.setOnClickListener{
+                val intent = Intent(this@MainActivity, NewsActivity::class.java)
+                startActivity(intent)
+            }
             analyzeButton.setOnClickListener { moveToResult() }
             galleryButton.setOnClickListener { startGallery() }
             cameraButton.setOnClickListener { startCameraX() }

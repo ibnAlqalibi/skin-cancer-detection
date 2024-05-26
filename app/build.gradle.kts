@@ -20,12 +20,19 @@ android {
     }
 
     buildTypes {
+        debug {
+            buildConfigField("String", "API_KEY", "\"53d802c5121c43cfb54b9fc67431628d\"")
+            buildConfigField("String", "BASE_URL", "\"https://newsapi.org/\"")
+        }
         release {
             isMinifyEnabled = false
             proguardFiles(
                 getDefaultProguardFile("proguard-android-optimize.txt"),
                 "proguard-rules.pro"
             )
+
+            buildConfigField("String", "API_KEY", "\"53d802c5121c43cfb54b9fc67431628d\"")
+            buildConfigField("String", "BASE_URL", "\"https://newsapi.org/\"")
         }
     }
     compileOptions {
@@ -38,6 +45,7 @@ android {
     buildFeatures {
         viewBinding = true
         mlModelBinding = true
+        buildConfig = true
     }
 
 }
@@ -65,6 +73,7 @@ dependencies {
     implementation("com.github.yalantis:ucrop:2.2.8-native")
     //viewmodel
     implementation("androidx.lifecycle:lifecycle-viewmodel-ktx:2.6.2")
+    implementation("androidx.activity:activity-ktx:1.8.2")
     //livedata
     implementation("androidx.lifecycle:lifecycle-livedata-ktx:2.6.2")
     //room
@@ -74,4 +83,5 @@ dependencies {
     implementation("com.github.bumptech.glide:glide:4.16.0")
     implementation("com.squareup.retrofit2:retrofit:2.9.0")
     implementation("com.squareup.retrofit2:converter-gson:2.9.0")
+    implementation("com.squareup.okhttp3:logging-interceptor:4.11.0")
 }

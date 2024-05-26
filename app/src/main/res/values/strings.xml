@@ -17,4 +17,8 @@
     <string name="history">History</string>
     <string name="close">Close</string>
     <string name="date">Date</string>
+    <string name="title">Title</string>
+    <string name="source">Source</string>
+    <string name="news">News</string>
+    <string name="desc">Description</string>
 </resources>

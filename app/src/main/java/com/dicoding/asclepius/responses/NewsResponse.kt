@@ -12,19 +12,12 @@ data class NewsResponse(
 
 	@field:SerializedName("articles")
 	val articles: List<ArticlesItem?>? = null,
-
-	@field:SerializedName("status")
-	val status: String? = null
 ) : Parcelable
 
 @Parcelize
 data class Source(
-
 	@field:SerializedName("name")
 	val name: String? = null,
-
-	@field:SerializedName("id")
-	val id: String? = null
 ) : Parcelable
 
 @Parcelize
