@@ -24,7 +24,7 @@ class NewsActivity : AppCompatActivity() {
         }
 
         newsViewModel.listNews.observe(this) { it ->
-            setUsersData(it)
+            setNewsData(it)
         }
 
         newsViewModel.isLoading.observe(this) {
@@ -46,7 +46,7 @@ class NewsActivity : AppCompatActivity() {
         binding.progressBar.visibility = if (isLoading) View.VISIBLE else View.GONE
     }
 
-    private fun setUsersData(usersList: List<ArticlesItem?>?) {
+    private fun setNewsData(usersList: List<ArticlesItem?>?) {
         val adapter = NewsAdapter(this@NewsActivity)
         adapter.submitList(usersList)
         binding.rvNews.adapter = adapter

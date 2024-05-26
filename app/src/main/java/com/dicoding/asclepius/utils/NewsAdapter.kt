@@ -2,6 +2,7 @@ package com.dicoding.asclepius.utils
 
 import android.content.Context
 import android.content.Intent
+import android.net.Uri
 import android.view.LayoutInflater
 import android.view.ViewGroup
 import androidx.recyclerview.widget.DiffUtil
@@ -26,19 +27,17 @@ class NewsAdapter(private val context: Context) : ListAdapter<ArticlesItem, News
 
     inner class MyViewHolder(private val binding: NewsCardBinding) : RecyclerView.ViewHolder(binding.root) {
         fun bind(article: ArticlesItem) {
-            binding.tvSource.text = article.source?.name
             binding.tvTitle.text = article.title
-            binding.tvTitle.text = article.description
+            binding.tvDesc.text = article.description
             Glide.with(context)
                 .load(article.urlToImage)
                 .placeholder(R.drawable.ic_place_holder)
                 .into(binding.imgItemPhoto)
 
-//            binding.cardView.setOnClickListener{
-//                val intent = Intent(context, UserDetailActivity::class.java)
-//                intent.putExtra(UserDetailActivity.EXTRA_USER, user)
-//                context.startActivity(intent)
-//            }
+            binding.cardView.setOnClickListener{
+                val intent = Intent(Intent.ACTION_VIEW, Uri.parse(article.url))
+                context.startActivity(intent)
+            }
         }
     }
 

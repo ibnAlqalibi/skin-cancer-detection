@@ -23,13 +23,20 @@ class NewsViewModel: ViewModel() {
     private val _isLoading = MutableLiveData<Boolean>()
     val isLoading: LiveData<Boolean> = _isLoading
 
+    private val _owner = MutableLiveData<String>()
+    val owner: LiveData<String> = _owner
+
     init{
-        findUsers()
+        findNews()
     }
 
-    private fun findUsers() {
+    fun setOwner(newOwner: String) {
+        _owner.value = newOwner
+    }
+
+    private fun findNews() {
         _isLoading.value = true
-        val client = ApiConfig.getApiService().getNews(QUERY, LAN, KEY)
+        val client = ApiConfig.getApiService().getNews(QUERY, CAT, LAN, KEY)
         client.enqueue(object : Callback<NewsResponse> {
             override fun onResponse(
                 call: Call<NewsResponse>,
@@ -53,6 +60,7 @@ class NewsViewModel: ViewModel() {
     companion object{
         private const val TAG = "NewsViewModel"
         private const val QUERY = "cancer"
+        private const val CAT = "health"
         private const val LAN = "en"
         private const val KEY = BuildConfig.API_KEY
     }
