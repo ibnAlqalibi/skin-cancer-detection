@@ -17,7 +17,6 @@ import com.dicoding.asclepius.databinding.ResultCardBinding
 import com.dicoding.asclepius.view.ResultActivity
 import com.dicoding.asclepius.viewmodels.HistoryViewModel
 import com.dicoding.asclepius.viewmodels.HistoryViewModelFactory
-import com.google.android.material.snackbar.Snackbar
 import java.text.NumberFormat
 
 class HistoryAdapter(private val context: Context) : ListAdapter<ResultEntity, HistoryAdapter.MyViewHolder>(DIFF_CALLBACK) {
