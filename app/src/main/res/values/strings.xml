@@ -1,13 +1,13 @@
 <resources>
-    <string name="app_name">Asclepius</string>
+    <string name="app_name">Skin Cancer</string>
     <string name="camera_x">CameraX</string>
     <string name="camera">Camera</string>
     <string name="gallery">Gallery</string>
     <string name="analyze">Analyze</string>
-    <string name="result">Hasil Analisis</string>
+    <string name="result">Hasil Analisis: </string>
     <string name="imgPreview">Preview</string>
     <string name="image_classifier_failed">Image classifier failed to initialize. See error logs for details</string>
-    <string name="waktu_analisis">Waktu Analisis</string>
+    <string name="waktu_analisis">Waktu Analisis: </string>
     <string name="waktu_analisis_ms">%d ms</string>
     <string name="history_label_score">%1$s %2$s</string>
     <string name="capture">Capture</string>
@@ -22,4 +22,8 @@
     <string name="news">News</string>
     <string name="desc">Description</string>
     <string name="content">Content</string>
+    <string name="latest_news">Latest News</string>
+    <string name="see_history">See History</string>
+    <string name="Scan">Start Scanning</string>
+    <string name="More">See More</string>
 </resources>

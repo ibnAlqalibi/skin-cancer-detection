@@ -15,7 +15,7 @@ dependencyResolutionManagement {
     }
 }
 
-rootProject.name = "Asclepius"
+rootProject.name = "SimpleSkinCancerDetection"
 include(":app")
 include(":ucrop")
  

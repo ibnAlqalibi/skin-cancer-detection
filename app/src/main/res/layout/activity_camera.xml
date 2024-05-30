@@ -13,26 +13,31 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent" />
 
-    <ImageView
+    <Button
+        style="?attr/materialIconButtonOutlinedStyle"
         android:id="@+id/captureImage"
-        android:layout_width="60dp"
-        android:layout_height="60dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
         android:layout_marginBottom="16dp"
+        app:iconTint="@color/white"
+        app:iconSize="40dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:srcCompat="@drawable/sharp_camera_24"
-        android:contentDescription="@string/capture" />
+        app:icon="@drawable/sharp_camera_24" />
 
-    <ImageView
+    <Button
         android:id="@+id/switchCamera"
-        android:layout_width="40dp"
-        android:layout_height="40dp"
+        style="?attr/materialIconButtonStyle"
+        app:iconSize="40dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:iconTint="@color/white"
         android:layout_marginTop="16dp"
-        android:layout_marginEnd="16dp"
+        app:icon="@drawable/baseline_cameraswitch_24"
+        app:layout_constraintStart_toEndOf="@+id/captureImage"
         app:layout_constraintEnd_toEndOf="@+id/viewFinder"
-        app:layout_constraintTop_toTopOf="parent"
-        app:srcCompat="@drawable/baseline_cameraswitch_24"
-        android:contentDescription="@string/switch_cam" />
+        app:layout_constraintBottom_toBottomOf="@+id/captureImage" />
 
+    
 </androidx.constraintlayout.widget.ConstraintLayout>
